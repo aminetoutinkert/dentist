@@ -10,22 +10,31 @@ import Footer from './components/Footer'
 import Reviews from './components/Reviews'
 import Dentists from './components/Dentists'
 import Form from './components/Form'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
- 
+
 
   return (
     <>
-    <Header />
-    <Hero />
-    <About />
-    <Services />
-    <Stats />
-    <Prices />
-    <Form />
-    <Reviews />
-    <Dentists />
-    <Footer />
+      <BrowserRouter>
+        <Header />
+
+        <Routes>
+        <Route
+          <Hero />
+          <About />
+          <Services />
+          <Stats />
+          <Prices />
+          <Form />
+          <Reviews />
+          <Dentists />
+
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }
